@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<fx:root type="javafx.scene.layout.BorderPane" xmlns:fx="http://javafx.com/fxml" fx:controller="jf.xmleditor.controllers.ExitController">
+  <center>
+    <VBox alignment="CENTER">
+      <children>
+        <Label alignment="CENTER" contentDisplay="CENTER" text="%msgExit" textAlignment="CENTER" wrapText="true">
+          <font>
+            <Font size="30.0" />
+          </font>
+        </Label>
+        <FlowPane alignment="CENTER" columnHalignment="CENTER">
+          <children>
+            <Button defaultButton="true" mnemonicParsing="false" onAction="#processOKAction" text="%lbOK">
+              <FlowPane.margin>
+                <Insets bottom="5.0" right="5.0" top="5.0" fx:id="x1" />
+              </FlowPane.margin>
+            </Button>
+            <Button cancelButton="true" mnemonicParsing="false" onAction="#processCancelAction" text="%lbCancel" FlowPane.margin="$x1" />
+          </children>
+        </FlowPane>
+      </children>
+    </VBox>
+  </center>
+  <stylesheets>
+    <URL value="@exit.css" />
+  </stylesheets>
+</fx:root>

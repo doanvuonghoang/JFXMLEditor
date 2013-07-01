@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.web.*?>
+<?scenebuilder-preview-i18n-resource ../../../LabelsBundle.properties?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="jf.xmleditor.controllers.IndexController">
+  <center>
+    <TabPane>
+      <tabs>
+        <Tab text="Untitled Tab 1" closable="false" >
+          <content>
+            <SplitPane id="SplitPane" dividerPositions="0.4">
+              <items>
+                    <jf.xmleditor.ui.DOMTreeView fx:id="dtv" />
+                    <jf.xmleditor.ui.DOMNodeEditor fx:id="dne"  />
+              </items>
+            </SplitPane>
+          </content>
+        </Tab>
+      </tabs>
+    </TabPane>
+  </center>
+  <top>
+    <ToolBar>
+      <items>
+        <Button text="%lbOpen" onAction="#processOpenAction"/>
+        <Button text="%lbSave" onAction="#processSaveAction" onKeyReleased="#processCTRL_SAction"  />
+        <Button text="%lbSaveAs" onAction="#processSaveAsAction" />
+        <Button text="%lbExit" onAction="#processExitAction" />
+      </items>
+    </ToolBar>
+  </top>
+</BorderPane>

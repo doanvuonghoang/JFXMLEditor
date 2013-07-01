@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<fx:root type="javafx.scene.layout.BorderPane" xmlns:fx="http://javafx.com/fxml" fx:controller="jf.xmleditor.ui.DOMTreeViewController" minWidth="180" >
+  <center>
+    <TreeView fx:id="tv" />
+  </center>
+  <top>
+    <HBox>
+      <children>
+        <GridPane HBox.hgrow="ALWAYS">
+          <children>
+            <TextField fx:id="textSearch" promptText="Enter XPath syntax to search ..." GridPane.columnIndex="0" GridPane.hgrow="ALWAYS" GridPane.rowIndex="0">
+              <GridPane.margin>
+                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+              </GridPane.margin>
+            </TextField>
+            <Button mnemonicParsing="false" onAction="#processSearchClick" text="Search" GridPane.columnIndex="1" GridPane.rowIndex="0">
+              <GridPane.margin>
+                <Insets bottom="5.0" right="5.0" top="5.0" />
+              </GridPane.margin>
+            </Button>
+            <Label fx:id="lbSearchStatus" text="Search status" wrapText="true" GridPane.columnIndex="0" GridPane.columnSpan="2" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.vgrow="ALWAYS">
+              <font>
+                <Font name="System Italic" size="12.0" />
+              </font>
+              <GridPane.margin>
+                <Insets left="5.0" right="5.0" />
+              </GridPane.margin>
+            </Label>
+          </children>
+          <columnConstraints>
+            <ColumnConstraints hgrow="ALWAYS" />
+            <ColumnConstraints hgrow="NEVER" />
+          </columnConstraints>
+          <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          </rowConstraints>
+        </GridPane>
+      </children>
+    </HBox>
+  </top>
+</fx:root>

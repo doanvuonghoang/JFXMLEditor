@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.web.*?>
+
+<fx:root type="javafx.scene.layout.BorderPane" xmlns:fx="http://javafx.com/fxml" fx:controller="jf.xmleditor.ui.DOMNodeEditorController">
+  <bottom>
+    <ToolBar>
+      <items>
+        <Label text="Modification Status:" />
+        <Button fx:id="lbStatus" mnemonicParsing="false" text="no changes" />
+      </items>
+    </ToolBar>
+  </bottom>
+  <center>
+    <SplitPane dividerPositions="0.504739336492891" focusTraversable="true" orientation="VERTICAL">
+      <items>
+        <BorderPane>
+          <center>
+            <HTMLEditor fx:id="htmlEditor" htmlText="&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body contenteditable=&quot;true&quot;&gt; &lt;/body&gt;&lt;/html&gt;" />
+          </center>
+        </BorderPane>
+        <BorderPane>
+          <center>
+            <TextArea fx:id="textEditor" wrapText="true" />
+          </center>
+        </BorderPane>
+      </items>
+    </SplitPane>
+  </center>
+</fx:root>
